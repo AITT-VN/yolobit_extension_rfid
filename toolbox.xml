@@ -1,0 +1,6 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="RFID" colour="#ae00ae" icon="clone">
+    <block type="yolobit_rfid_detect" />
+    <block type="yolobit_rfid_readUID" />
+  </category>
+</xml>

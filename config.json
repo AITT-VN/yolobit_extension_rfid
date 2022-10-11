@@ -1,0 +1,13 @@
+{
+    "name": "RFID 13.56MHz SPI",
+    "description": "Mục mở rộng Yolo:Bit cho RFID 13.56MHz (MFRC522) SPI",
+    "libs": [
+        "yolobit_mfrc522.py"
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {},
+    "poster": "poster.png"
+}
