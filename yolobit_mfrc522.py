@@ -1,6 +1,4 @@
 # https://github.com/cefn/micropython-mfrc522/blob/master/mfrc522.py
-from yolobit import *
-import music
 from machine import Pin, SPI
 from os import uname
 
@@ -321,19 +319,17 @@ class RFID(MFRC522):
         self.rdr = MFRC522(spi=self.spi, gpioRst=13, gpioCs=5)
         print('RFID setup done!')
 
-    def isDetected(self, alarm=False):
+    def isDetected(self):
         try:
             (stat, tag_type) = self.rdr.request(self.rdr.REQIDL)
             if stat == self.rdr.OK:
-                if (alarm == True):
-                    music.play(['G3:1'], wait=True)
                 return True
         except:
             return False
 
         return False
 
-    def readUID(self, alarm=False):
+    def readUID(self):
         uid = ""
         (stat, tag_type) = self.rdr.request(self.rdr.REQIDL)
         if stat == self.rdr.OK:
@@ -341,8 +337,6 @@ class RFID(MFRC522):
             if stat == self.rdr.OK:
                 uid = "0x%02x%02x%02x%02x" % (
                     raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3])
-                if (alarm == True):
-                    music.play(['G3:1'], wait=True)
             return(uid)
 
     def unit_test(self):
