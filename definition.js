@@ -15,7 +15,7 @@ Blockly.Blocks['yolobit_rfid_detect'] = {
 
 Blockly.Python["yolobit_rfid_detect"] = function (block) {
   Blockly.Python.definitions_['import_rfid'] = "from yolobit_mfrc522 import RFID";
-  Blockly.Python.definitions_['init_rfid'] = "rfid = RFID()";
+  Blockly.Python.definitions_['create_rfid'] = "rfid = RFID()";
   // TODO: Assemble Python into code variable.
   var code = 'rfid.isDetected()'
   return [code, Blockly.Python.ORDER_NONE];
@@ -39,7 +39,7 @@ Blockly.Blocks['yolobit_rfid_readUID'] = {
 
 Blockly.Python["yolobit_rfid_readUID"] = function (block) {
   Blockly.Python.definitions_['import_rfid'] = "from yolobit_mfrc522 import RFID";
-  Blockly.Python.definitions_['init_rfid'] = "rfid = RFID()";
+  Blockly.Python.definitions_['create_rfid'] = "rfid = RFID()";
   // TODO: Assemble Python into code variable.
   var code = 'rfid.readUID()'
   return [code, Blockly.Python.ORDER_NONE];
